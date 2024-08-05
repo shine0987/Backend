@@ -8,7 +8,7 @@ var queryParams = '?' + encodeURIComponent('serviceKey') + '=' + API_KEY;
 queryParams += '&' + encodeURIComponent('target') + '=' + encodeURIComponent('pttn'); 
 queryParams += '&' + encodeURIComponent('dateFrom') + '=' + encodeURIComponent('20240720'); 
 queryParams += '&' + encodeURIComponent('dateTo') + '=' + encodeURIComponent('20240720'); 
-
+ 
 const URL = url + queryParams;
 fetch(URL)
     .then(res => res.json())
@@ -26,3 +26,4 @@ fetch(URL)
         }
     })
     .catch((error) => console.log("error:", error));
+    
