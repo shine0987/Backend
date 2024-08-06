@@ -1,4 +1,5 @@
 import OpenAI from "openai";
+import Configuration from "openai";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -8,7 +9,10 @@ const apiKeySecret = process.env.OPENAI_API_KEY;
 role(역할): system, user, assistant
 */
 
-const openai = new OpenAI();
+const configuration = new Configuration({
+  apiKey: apiKeySecret
+})
+const openai = new OpenAI(configuration);
 const content = "안녕? 너의 이름은 뭐야?";
 async function main() {
 
